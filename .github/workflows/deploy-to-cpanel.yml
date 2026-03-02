@@ -1,0 +1,53 @@
+name: Build and Deploy to cPanel
+
+on:
+  push:
+    branches: [ main ]
+  repository_dispatch:
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies (if any)
+        run: |
+          if [ -f package.json ]; then npm ci; fi
+
+      - name: Run static generator
+        run: node tools/generate.js
+
+      - name: Deploy via SFTP (SSH) if private key provided
+        if: ${{ secrets.SSH_PRIVATE_KEY != '' }}
+        uses: appleboy/scp-action@v0.1.6
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT || '22' }}
+          source: |
+            index.html
+            css/
+            img/
+            js/
+            article/
+            articles.json
+          target: ${{ secrets.REMOTE_PATH }}
+
+      - name: Deploy via FTP fallback
+        if: ${{ secrets.FTP_PASS != '' }}
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          local-dir: .
+          server-dir: ${{ secrets.REMOTE_PATH }}
