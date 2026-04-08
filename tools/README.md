@@ -1,4 +1,4 @@
-# 📰 BizNews Article Generator
+﻿# 📰 BizNews Article Generator
 
 Skrip otomatis untuk generate artikel dari Google Sheets dan mengintegrasikannya **langsung** ke website BizNews (menu News, Search, Related Articles).
 
@@ -206,3 +206,6 @@ Jika ada pertanyaan atau masalah, hubungi tim development BizNews.
 
 **Last updated:** February 12, 2026  
 **Version:** 2.0 (articles.json integration)
+
+
+

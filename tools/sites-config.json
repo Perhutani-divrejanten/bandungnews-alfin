@@ -1,3 +1,4 @@
+﻿
 {
   "description": "Konfigurasi untuk 34 portal berita. Edit nilai di bawah sesuai kebutuhan dan jalankan generate-sites.js",
   "basePath": "../",
@@ -10,9 +11,9 @@
       "email": "tribunjanten@gmail.com",
       "socialHandle": "tribunjanten",
       "colors": {
-        "primary": "#1E3A8A",
+        "primary": "#042F2E",
         "dark": "#0B1F3A",
-        "secondary": "#31404B"
+        "secondary": "#1F3F5F"
       }
     },
     {
@@ -30,13 +31,13 @@
     {
       "id": 3,
       "folderName": "site-03-portal3",
-      "siteName": "Warta Janten",
-      "email": "wartajanten@gmail.com",
-      "socialHandle": "wartajanten",
+      "siteName": "Bandung News",
+      "email": "bandungnews@gmail.com",
+      "socialHandle": "bandungnews",
       "colors": {
-        "primary": "#065F46",
-        "dark": "#022C22",
-        "secondary": "#1E3A5F"
+        "primary": "#0F766E",
+        "dark": "#042F2E",
+        "secondary": "#1F3F5F"
       }
     },
     {
@@ -198,13 +199,13 @@
     {
       "id": 17,
       "folderName": "site-17-portal17",
-      "siteName": "Arah Berita",
-      "email": "arahberita@gmail.com",
-      "socialHandle": "arahberita",
+      "siteName": "Bandung News",
+      "email": "bandungnews@gmail.com",
+      "socialHandle": "bandungnews",
       "colors": {
-        "primary": "#1D4ED8",
-        "dark": "#1E3A8A",
-        "secondary": "#7F2F4F"
+        "primary": "#0F766E",
+        "dark": "#042F2E",
+        "secondary": "#1F3F5F"
       }
     },
     {
@@ -322,8 +323,8 @@
       "email": "fokusnusantara@gmail.com",
       "socialHandle": "fokusnusantara",
       "colors": {
-        "primary": "#065F46",
-        "dark": "#022C22",
+        "primary": "#0F766E",
+        "dark": "#042F2E",
         "secondary": "#6B3D51"
       }
     },
@@ -406,10 +407,15 @@
       "email": "kilasjanten@gmail.com",
       "socialHandle": "kilasjanten",
       "colors": {
-        "primary": "#1E3A8A",
+        "primary": "#042F2E",
         "dark": "#3F0F1F",
         "secondary": "#0B1120"
       }
     }
   ]
 }
+
+
+
+
+
